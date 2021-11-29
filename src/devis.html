@@ -1,0 +1,138 @@
+---
+layout: default
+permalink: /devis
+---
+
+<section class="slider slide1">
+    <div class="container">
+        <h1>Devis</h1>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <form class="form" method="post" id="contactForm" action="{{ site.data.company.url.notify }}">
+            <input type="hidden" name="lang" value="fr">
+            <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
+            <input type="hidden" name="type" value="contact" />
+            <input type="hidden" name="website" value="{{ site.data.company.website }}" />
+            <input type="hidden" name="lang" value="{{ site.data.company.lang }}" />
+            <input type="hidden" name="firstName" value="" />
+            <input type="hidden" name="key" value="{{ site.data.company.recaptcha.server }}">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback ">
+                                <label for="form_firstname">Prénom</label> <input type="text" name="firstname"
+                                    id="firstname" value="" class="form-control" placeholder="Prénom">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group has-feedback ">
+                                <label for="form_lastname">Nom</label> <input type="text" name="lastname"
+                                    id="lastname" value="" class="form-control" placeholder="Nom">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group has-feedback ">
+                                <label for="form_email">E-mail</label> <input type="text" name="email" id="email"
+                                    value="" class="form-control" placeholder="text@exemple.fr">
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="form-group has-feedback ">
+                                <label for="form_phone">Téléphone</label> <input type="text" name="phone"
+                                    id="phone" value="" class="form-control" placeholder="06 00 00 00 00">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group has-feedback ">
+                                <label for="form_zipcode">Code postal</label> <input type="text" name="zipcode"
+                                    id="zipcode" value="" class="form-control" placeholder="Code Postal">
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="form-group has-feedback ">
+                                <label for="form_city">Ville</label> <input type="text" name="city" id="city"
+                                    value="" class="form-control" placeholder="Ville">
+                            </div>
+                        </div>
+                    </div>
+                    </fieldset>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group has-feedback ">
+                        <label>Type de logement :</label>
+                        <div class="checkbox" style="margin-top: 0;">
+                            <input type="checkbox" id="type" name="checkbox1" value="1" checked="">
+                            Maison
+                        </div>
+                        <div class="checkbox" style="margin-top: 0;">
+                            <input type="checkbox" id="type" name="checkbox2" value="1">
+                            Appartement
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="form-group has-feedback ">
+                        <label for="form_select1">Quelle installation souhaitez-vous réaliser :</label> <select
+                            name="select1" id="select1" class="form-control">
+                            <option>Climatisation</option>
+                            <option>Chauffage</option>
+                            <option>Eau chaude sanitaire</option>
+                        </select>
+                    </div>
+                    <div class="form-group has-feedback ">
+                        <label for="form_select2">Type de chauffage déjà installé : </label> <select name="select2"
+                            id="select2" class="form-control">
+                            <option selected="selected"></option>
+                            <option>Electrique</option>
+                            <option>Fioul</option>
+                            <option>Gaz naturel</option>
+                            <option>GPL</option>
+                            <option>Pompe à chaleur</option>
+                            <option>Bois</option>
+                            <option>Charbon</option>
+                        </select>
+                    </div>
+                    <div class="form-group has-feedback ">
+                        <label for="select3">Dans quel délai :</label> <select name="select3" id="select3"
+                            class="form-control">
+                            <option>Immédiat</option>
+                            <option>D'ici 3 mois</option>
+                            <option>De 3 à 6 mois</option>
+                            <option>Au delà de 6 mois</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group has-feedback ">
+                <label for="message">Informations complémentaire (facultatif)</label> <textarea name="message"
+                    id="message" class="form-control" rows="6"></textarea>
+            </div>
+            <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="{{ site.data.company.recaptcha.client }}">
+                </div>
+                <br />
+                <div id="contact-form-response"></div>
+                <input style="display: none" type="submit" value="Submit"
+                    class="wpcf7-form-control wpcf7-submit" />
+            </div>
+            <div class="checkbox" style="margin-right: -7rem !important;">
+                <input name="condition" type="checkbox"
+                    style="height:2rem; width:2rem; vertical-align: middle;" />
+                <span class="contact_space-form--label"
+                    style="color: #333 !important; margin-left: 1rem; font-size: 1.2rem;">
+                    En utilisant ce formulaire, vous acceptez le stockage et la gestion
+                    de vos données par ce site *</span>
+                <i class="fa fa-info-square" aria-hidden="true"></i>
+            </div>
+            <div class="text-center">
+                <button type="submit" name="devis" class="button form-submit">Envoyer</button>
+            </div>
+        </form>
+    </div>
+</section>

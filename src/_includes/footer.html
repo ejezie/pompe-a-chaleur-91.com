@@ -1,0 +1,56 @@
+<div class="footer mt-5">
+    <hr>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm text-center">
+                <p>Latius iam disseminata licentia onerosus bonis omnibus Caesar nullum post haec adhibens modum
+                    orientis latera cuncta vexabat nec honoratis parcens nec urbium primatibus nec plebeiis.
+                </p>
+            </div>
+            <div class="col-sm">
+                <h2>Lien utiles</h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
+                                <a class="nav-link" href="{% link accueil.html %}">Accueil</a>
+                            </li>
+                            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
+                                <a class="nav-link" href="{% link accueil.html %}">Notre entreprise</a>
+                            </li>
+                            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
+                                <a class="nav-link" href="{% link accueil.html %}">Nos services</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item {% if page.url == '/galerie' %}active{% endif %}">
+                                <a class="nav-link" href="{% link galerie.html %}">Nos réalisations</a>
+                            </li>
+                            <li class="nav-item {% if page.url == '/contact' %}active{% endif %}">
+                                <a class="nav-link" href="{% link contact.html %}">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="" href="{% link devis.html %}"> Devis Gratuit</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm">
+                <h2>Coordonnées</h2>
+                <p><i class="flaticon-mobile"></i> {{ site.data.company.phones[0] }}</p>
+                <p>
+                    <i class="flaticon-map-location"></i> {{ site.data.company.adresse}}
+                </p>
+                <p><i class="flaticon-mail"></i> {{ site.data.company.emails[0] }}</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="./assets/js/main.js"></script>
+<script src="../assets/js/formSubmit.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>

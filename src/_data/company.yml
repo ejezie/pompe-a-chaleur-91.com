@@ -1,0 +1,32 @@
+####################
+# CONFIG
+####################
+name: pompe-a-chaleur-91.com
+phones:
+  - 01 85 53 93 72
+  - 0185539372
+emails:
+  - contact@helloclim.fr
+  - Email 2 (to complete)
+
+websiteAddr: bhinternet.fr
+# website id of app.bhinternet.fr
+website: 144
+
+
+adresse: 8 Impasse du closeau, 91580 VILLENEUVE SUR AUVERS
+
+
+recaptcha:
+  client: 6LdMZCIdAAAAAPugD6DfFTagZSc9m-R-60wNYEkL
+  server: 6LdMZCIdAAAAAPTwAPWyh1V5wv1Tu-3vUIibgF8c
+
+lang: fr
+media: 
+  - https://www.facebook.com/Hello-clim-111173953801120/
+  - https://www.instagram.com/helloclim/?hl=fr
+  
+url:
+  #notify: 'https://q8zptub5j7.execute-api.eu-west-2.amazonaws.com/dev/notify' # for dev
+  notify: 'https://jgviaboye9.execute-api.eu-west-3.amazonaws.com/prod/notify' #prod
+  redirect: '/'
