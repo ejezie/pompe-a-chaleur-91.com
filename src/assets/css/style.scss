@@ -16,6 +16,15 @@
 $red: #bd2e2b;
 $blue: #244064;
 
+.observe{
+  opacity: 0;
+  transform: translateY(100px) !important;
+}
+.show{
+  transition: all 1s ;
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
 // h2{
 //   text-align: center;
 //   @media (max-width: 960px) {
@@ -43,6 +52,17 @@ body {
 .top {
   padding-top: 10px;
   padding-bottom: 2px;
+}
+#top{
+  .content{
+    width: 80%;
+    a{
+      width: 11rem; 
+    }
+    p{
+      width: 11rem;
+    }
+  }
 }
 #top .btn {
   border-radius: 15px;
@@ -73,6 +93,7 @@ body {
 }
 .menu {
   background-color: #eee;
+  z-index: 2;
   // height: fit-content;
 }
 .menu .logo {
@@ -92,9 +113,38 @@ body {
 }
 .fixphone {
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 99vw;
   z-index: 999;
-  right: 20px;
   bottom: 4px;
+  @media (max-width: 400px) {
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+  }
+  .button{
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    @media (max-width: 400px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      height: 2rem;
+      margin-right: 9.6rem;
+    }
+  }
+  .BadgeLayout__Container-sc-7ux0pm-0{
+    margin-left: 3rem;
+    @media (max-width: 960px) {
+      .BadgeLayout__Container-sc-7ux0pm-0 {
+      transform: scale(0.6);
+      transform-origin: left bottom;
+      }
+      }
+  }
 }
 .footer h2 {
   font-size: 20px;
@@ -438,10 +488,13 @@ ul.list li::before {
   height: 35rem;
   object-fit: cover;
   margin-left: 6rem;
-  @media (max-width: 960px) {
-    margin-left: 0rem;
+  @media (max-width: 1100px) {
+    margin-left: 2rem;
+    width: 25rem;
+  height: 25rem;
   }
   @media (max-width: 460px) {
+    margin-left: 0rem;
     width: 20rem;
     height: 20rem;
   }
@@ -1099,6 +1152,7 @@ ul.list li::before {
   }
   h2 {
     text-align: center;
+    margin-top: 2rem;
     @media (max-width: 960px) {
       font-size: 2rem;
     }
@@ -1461,42 +1515,52 @@ ul.list li::before {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 #clibg{
   background: url(../img/clibg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 #thbg{
   background: url(../img/thbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 #pmbg{
   background: url(../img/pmbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 #mnbg{
   background: url(../img/mnbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 #devisbg{
   background: url(../img/devisbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -2;
 }
 #contactbg{
   background: url(../img/contactbg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  z-index: -2;
+}
+#nosbg{
+  z-index: -2;
 }
 
 #contact{
@@ -1555,6 +1619,16 @@ ul.list li::before {
       margin-bottom: 2rem;
      i{
        color: $red;
+     }
+     .image-wrap{
+       display: flex;
+       align-items: center;
+       a{
+        img{
+          width: 2rem;
+          margin-right: 1rem;
+        }
+       }
      }
     }
     .contents{
