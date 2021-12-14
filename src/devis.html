@@ -3,14 +3,15 @@ layout: default
 permalink: /devis
 ---
 
-<section class="slider slide1">
+<section class="slider slide1" id="devisbg">
     <div class="container">
-        <h1>Devis</h1>
+        <h1>DEMANDEZ VOTRE DEVIS <span>GRATUIT</span> ET <span>SANS ENGAGEMENT</span></h1>
     </div>
 </section>
-<section>
+<section id="contact">
+    <h2 class="observe">Remplissez notre formulaire gratuitement et obtenez un devis dans les plus brefs délais</h2>
     <div class="container">
-        <form class="form" method="post" id="contactForm" action="{{ site.data.company.url.notify }}">
+        <form class="form observe" method="post" id="contactForm" action="{{ site.data.company.url.notify }}">
             <input type="hidden" name="lang" value="fr">
             <input type="hidden" name="redirectUrl" value="{{site.data.company.url.redirect}}" />
             <input type="hidden" name="type" value="contact" />
@@ -65,7 +66,7 @@ permalink: /devis
                     </fieldset>
                 </div>
                 <div class="col-sm-6">
-                    <div class="form-group has-feedback ">
+                    <!-- <div class="form-group has-feedback ">
                         <label>Type de logement :</label>
                         <div class="checkbox" style="margin-top: 0;">
                             <input type="checkbox" id="type" name="checkbox1" value="1" checked="">
@@ -75,14 +76,15 @@ permalink: /devis
                             <input type="checkbox" id="type" name="checkbox2" value="1">
                             Appartement
                         </div>
-                    </div>
+                    </div> -->
                     <p></p>
                     <div class="form-group has-feedback ">
                         <label for="form_select1">Quelle installation souhaitez-vous réaliser :</label> <select
                             name="select1" id="select1" class="form-control">
                             <option>Climatisation</option>
-                            <option>Chauffage</option>
-                            <option>Eau chaude sanitaire</option>
+                            <option>ballon-thermodynamique</option>
+                            <option>pompe-a-chaleur</option>
+                            <option>Maintenance/SAV</option>
                         </select>
                     </div>
                     <div class="form-group has-feedback ">
@@ -124,8 +126,8 @@ permalink: /devis
             <div class="checkbox" style="margin-right: -7rem !important;">
                 <input name="condition" type="checkbox"
                     style="height:2rem; width:2rem; vertical-align: middle;" />
-                <span class="contact_space-form--label"
-                    style="color: #333 !important; margin-left: 1rem; font-size: 1.2rem;">
+                <span class="contact_space-form--label text"
+                    style="color: #333 !important; margin-left: 1rem; font-size: 1rem;">
                     En utilisant ce formulaire, vous acceptez le stockage et la gestion
                     de vos données par ce site *</span>
                 <i class="fa fa-info-square" aria-hidden="true"></i>
