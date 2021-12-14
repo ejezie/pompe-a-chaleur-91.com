@@ -1,56 +1,48 @@
-<div class="footer mt-5">
+<div class="footer mt-5" id="foot">
     <hr>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-sm text-center">
-                <p>Latius iam disseminata licentia onerosus bonis omnibus Caesar nullum post haec adhibens modum
-                    orientis latera cuncta vexabat nec honoratis parcens nec urbium primatibus nec plebeiis.
-                </p>
-            </div>
-            <div class="col-sm">
-                <h2>Lien utiles</h2>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
-                                <a class="nav-link" href="{% link accueil.html %}">Accueil</a>
-                            </li>
-                            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
-                                <a class="nav-link" href="{% link accueil.html %}">Notre entreprise</a>
-                            </li>
-                            <li class="nav-item {% if page.url == '/' %}active{% endif %}">
-                                <a class="nav-link" href="{% link accueil.html %}">Nos services</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-6">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item {% if page.url == '/galerie' %}active{% endif %}">
-                                <a class="nav-link" href="{% link galerie.html %}">Nos réalisations</a>
-                            </li>
-                            <li class="nav-item {% if page.url == '/contact' %}active{% endif %}">
-                                <a class="nav-link" href="{% link contact.html %}">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="" href="{% link devis.html %}"> Devis Gratuit</a>
-                            </li>
-                        </ul>
-                    </div>
+        <div class="foot-wrap">
+            <div class="img-wrap">
+                <div class="wrap">
+                    <img src="../assets/img/Effy.jpg" alt="">
+                    <img src="../assets/img/logo2.png" alt="">
                 </div>
-
+                <div class="wrap">
+                    <img src="../assets/img/airwell.png" alt="">
+                    <img src="../assets/img/Daikin.png" alt="">
+                </div>
             </div>
-            <div class="col-sm">
+            <div class="contents">
+                <div class="wrap">
+                    <img src="../assets/img/logo.png" alt="">
+                    <p>Une entreprise vous installe votre pompe à chaleur dans tout le département 91 et toute l’Île-de-France. Confiez votre chauffage à des professionnels compétents. Votre transition énergétique auprès d’une équipe qualifiée RGE et certifié QUALIPAC. Des prestations d’installation, d’entretien et de dépannage dans un seul endroit, et vente de produit de qualité.</p>
+                </div>
+                <div class="wrap">
+                    <h3>Liens Utiles</h3>
+                    <a class="{% if page.url == '/climatisation' %}active{% endif %}"
+                    href="{% link climatisation.html %}">climatisation</a>
+                   <a class="{% if page.url == '/maintenance' %}active{% endif %}"
+                       href="{% link maintenance.html %}">maintenance/Sav</a>
+                   <a class="{% if page.url == '/ballon-thermodynamique' %}active{% endif %}"
+                       href="{% link ballon-thermodynamique.html %}">thermodynamique</a>
+                   <a class="{% if page.url == '/pompe-a-chaleur' %}active{% endif %}"
+                       href="{% link pompe-a-chaleur.html %}">pompe à chaleur</a>
+                </div>
+            </div>
+            <div class="content">
                 <h2>Coordonnées</h2>
-                <p><i class="flaticon-mobile"></i> {{ site.data.company.phones[0] }}</p>
+                <p><i class="fas fa-phone-alt"></i> {{ site.data.company.phones[0] }}</p>
                 <p>
-                    <i class="flaticon-map-location"></i> {{ site.data.company.adresse}}
+                    <i class="fas fa-map-marker-alt"></i></i> {{ site.data.company.adresse}}
                 </p>
-                <p><i class="flaticon-mail"></i> {{ site.data.company.emails[0] }}</p>
-
+                <p><i class="fas fa-envelope"></i></i> {{ site.data.company.emails[0] }}</p>
+                <div class="image-wrap">
+                   <a href="https://web.facebook.com/Hello-clim-111173953801120/?_rdc=1&_rdr"><img src="../assets/img/facebook.png" alt="facebook"> </a>
+                    <a href="https://www.instagram.com/helloclim/?hl=fr"><img src="../assets/img/instagram.png" alt="instagram"></a>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
+        </div> 
+</div> 
 <script defer src="./assets/js/main.js"></script>
 <script src="../assets/js/formSubmit.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ 
